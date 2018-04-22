@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:fruit_inspector"
+             x:Class="fruit_inspector.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="PhotoImage" 
+               Grid.ColumnSpan="3" />
+        <Button x:Name="CameraButton"
+                Text="Take Photo"
+                Grid.Row="1"
+                Grid.Column="1" />
+        <Button x:Name="SuccessButton"
+                Text="Match"
+                Grid.Column="0"
+                Grid.Row="1"
+                IsVisible="False" />
+        <Button x:Name="FailureButton"
+                Text="Match"
+                Grid.Column="2"
+                Grid.Row="1"
+                IsVisible="False" />
+    </Grid>
+</ContentPage>
