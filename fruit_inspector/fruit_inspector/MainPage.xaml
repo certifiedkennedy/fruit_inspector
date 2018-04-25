@@ -7,7 +7,9 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="50" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
@@ -16,10 +18,22 @@
         </Grid.ColumnDefinitions>
 
         <Image x:Name="PhotoImage" 
-               Grid.ColumnSpan="3" />
+               Grid.ColumnSpan="3" 
+               Grid.RowSpan="2" />
+        <Label x:Name="ResultLabel"
+               Grid.Column="1"
+               Grid.Row="1"
+               Text=""
+               IsVisible="False"
+               HorizontalOptions="Center"
+               VerticalOptions="End"
+               FontSize="Large"
+               TextColor="Aqua"
+               BackgroundColor="Black"
+               />
         <Button x:Name="CameraButton"
                 Text="Take Photo"
-                Grid.Row="1"
+                Grid.Row="2"
                 Grid.Column="1" />
         <Button x:Name="SuccessButton"
                 Text="Match"
